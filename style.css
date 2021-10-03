@@ -14,9 +14,16 @@ Latte WordPress Theme, Copyright (C) 2016, Hardeep Asrani
 Latte is distributed under the terms of the GNU GPL
 */
 
+/* 
+ * This is some sort of quick fix to import new fonts. I decided to use Oswald for headers and Merriweather for the text.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap');
+
 /*
  * Base structure
  */
+
 html,
 body {
 	margin:0;
@@ -81,6 +88,7 @@ a.checkout-button.button.alt.wc-forward {
 	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
+	user-select: none;
 	-moz-user-select: none;
 	border: 1px solid transparent;
 }
@@ -166,7 +174,7 @@ textarea:focus {
 	margin: 0 auto;
 }
 .lead {
-	font-family: 'Sanchez', sans-serif;
+	font-family: 'Merriweather', sans-serif;
 }
 
 /*
@@ -219,12 +227,16 @@ img.alignright,
 	text-align: center;
 }
 .gallery-caption {
+
 }
 .screen-reader-text {
+
 }
 .screen-reader-textslider {
+
 }
 .bypostauthor {
+
 }
 .widget_calendar table {
 	width: 100%;
@@ -269,9 +281,14 @@ img.alignright,
 	box-shadow: 0px 0px 0px 0px rgba(200, 95, 66, 0.4) inset, 0px 0px 0px 16px rgba(255, 255, 255, 0.6) inset, 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .intro .cover-heading {
-	font-family: 'Sanchez', sans-serif;
-	font-size: 50px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
 	word-break: keep-all;
+}
+
+.intro .lead {
+	font-family: 'Merriweather', sans-serif;
+	font-size: 20px;
 }
 .intro .arrow .fa {
 	font-size: 50px;
@@ -296,14 +313,15 @@ img.alignright,
 	text-align: center;
 }
 .about .about-header h2 {
-	font-size: 40px;
-	font-family: "Sanchez",sans-serif;
+	/* original font-size was 40 px, but it looked kinda small, so I increased it to 60 px. */	
+	font-size: 60px;
+	font-family: "Oswald",sans-serif;
 	font-weight: bold;
 	word-break: keep-all;
 }
 .about .about-header h3 {
 	color: #9F8E8E;
-	font-size: 15px;
+	font-size: 20px;
 	margin-top: 0;
 }
 .about .lead {
@@ -330,8 +348,8 @@ img.alignright,
 	text-align: center;
 }
 .social h2 {
-	font-size: 40px;
-	font-family: "Sanchez",sans-serif;
+	font-size: 60px;
+	font-family: "Oswald",sans-serif;
 	font-weight: bold;
 	word-break: keep-all;
 }
@@ -471,14 +489,14 @@ img.alignright,
 }
 .services h2 {
 	text-align: center;
-	font-size: 40px;
-	font-family: "Sanchez",sans-serif;
+	font-size: 60px;
+	font-family: "Oswald",sans-serif;
 	font-weight: bold;
 	word-break: keep-all;
 }
 .services h3 {
 	color: #9F8E8E;
-	font-size: 15px;
+	font-size: 20px;
 	margin-top: 0;
 }
 .services .service-box {
@@ -529,15 +547,15 @@ img.alignright,
 	margin-bottom: 50px;
 }
 .subscribe h2 {
-	font-size: 40px;
-	font-family: "Sanchez",sans-serif;
+	font-size: 60px;
+	font-family: "Oswald",sans-serif;
 	font-weight: bold;
 	color: #FFF;
 	word-break: keep-all;
 }
 .subscribe h3 {
 	color: #FFF;
-	font-size: 15px;
+	font-size: 20px;
 	margin-top: 0;
 }
 .subscribe .sendinbluetitle {
@@ -592,14 +610,14 @@ img.alignright,
 	margin-bottom: 50px;
 }
 .skills h2 {
-	font-size: 40px;
-	font-family: "Sanchez",sans-serif;
+	font-size: 60px;
+	font-family: "Oswald",sans-serif;
 	font-weight: bold;
 	word-break: keep-all;
 }
 .skills h3 {
 	color: #9F8E8E;
-	font-size: 15px;
+	font-size: 20px;
 	margin-top: 0;
 }
 .skills .skill-box {
@@ -689,8 +707,8 @@ img.alignright,
 	margin-bottom: 50px;
 }
 .blogposts h2 {
-	font-size: 40px;
-	font-family: "Sanchez",sans-serif;
+	font-size: 60px;
+	font-family: "Oswald",sans-serif;
 	font-weight: bold;
 	word-break: keep-all;
 }
@@ -715,13 +733,21 @@ img.alignright,
 	max-height: 339px;
 }
 .blogposts .blog-item .item-meta .post-title a {
-	font-size: 20px;
+	font-family: "Oswald",sans-serif;
+	font-size: 30px;
 }
 .blogposts .blog-item .item-meta {
 	padding: 20px;
 }
+
+.blogposts .blog-item .item-meta h6 {
+	font-family: "Merriweather", serif;
+	font-size: 20px;
+}
+
 .blogposts .blog-item .item-meta p {
-	font-size: 14px;
+	
+	font-size: 15px;
 }
 
 /*
@@ -806,7 +832,12 @@ img.alignright,
 	color: #404040;
 }
 .container .item .post-thumbnail {
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: center;
+}
+.container .item .post-thumbnail img {
+	border-radius: 50px;
 }
 .container .item .post-content a,
 .container .item .post-subtitle a {
@@ -818,6 +849,7 @@ img.alignright,
 	color: #0085a1;
 }
 .container .item .post-title {
+	font-family: "Oswald",sans-serif;
 	font-size: 30px;
 	font-weight: 800;
 	margin-bottom: 10px;
@@ -829,9 +861,14 @@ img.alignright,
 }
 .container .item .post-meta {
 	color: #808080;
+	font-family: "Merriweather", serif;
 	font-size: 18px;
 	font-style: italic;
 	margin-top: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #808080;
 }
 .container .item .content .post-meta {
 	margin-top: 40px;
@@ -850,9 +887,15 @@ img.alignright,
 }
 .container .item  p,
 .container .item  li {
+	font-family: "Merriweather", serif;
 	font-size: 20px;
 	line-height: 1.5;
 	margin: 10px 0px;
+}
+.container .item img {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 50px;
 }
 .status-avatar {
 	float: left;

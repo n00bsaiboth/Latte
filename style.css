@@ -730,6 +730,9 @@ img.alignright,
 }
 .blogposts .blog-item .item .item-featured-image img{
 	width: 100%;
+	padding: 0;
+	border-radius: 0;
+	
 	max-height: 339px;
 }
 .blogposts .blog-item .item-meta .post-title a {
@@ -852,7 +855,7 @@ img.alignright,
 	font-family: "Oswald",sans-serif;
 	font-size: 30px;
 	font-weight: 800;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .container .item a .post-subtitle {
 	margin: 0;

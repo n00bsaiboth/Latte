@@ -761,8 +761,14 @@ img.alignright,
 	background: #272727;
 	color: #FFF;
 }
+.footer p {
+	font-size: 15px;
+}
 .footer a {
 	color: #FFF;
+}
+.footer a:hover {
+	text-decoration:underline;
 }
 .footer .row {
 	padding: 20px;
@@ -791,8 +797,8 @@ img.alignright,
 	padding: 0 20px;
 }
 .archive-header .cover-heading {
-	font-family: 'Sanchez', sans-serif;
-	font-size: 50px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
 }
 .archive-header .cover-heading a {
 	color: #FFF;
@@ -815,8 +821,8 @@ img.alignright,
 	padding: 0 20px;
 }
 .post-header .cover-heading {
-	font-family: 'Sanchez', sans-serif;
-	font-size: 50px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
 }
 .post-header .cover-heading a {
 	color: #FFF;
